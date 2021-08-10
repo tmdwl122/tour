@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+/* 기본화면 1065px 이상 */
+.row {
+    max-width: 1065px;
+    margin: 0 auto;
+}
+
+body {
+   font-family:'Malgun Gothic','맑은 고딕',sans-serif; 
+   font-size:16px; 
+   letter-spacing:-1px; 
+   color:#444; 
+}
+
+/* 건너뛰기 링크(접근성) */
+.skipnavi {
+    position:absolute; 
+    left:0; 
+    top:-50px;
+    text-indent:-9999px; 
+    font-size:0; 
+    width:100%; 
+    z-index:999; 
+}
+
+.skipnavi li a:focus, 
+.skipnavi li a:active {
+    position:absolute; 
+    left:0; top:50px; 
+    display:block; 
+    width:100%; 
+    padding:5px 0; 
+    text-align:center;
+    text-indent:0px; 
+    font-size:12px; 
+    font-weight:bold; 
+    background:#f2f2f2;
+}
+
+#header {
+    position: fixed;
+    top:0;
+    left: 0;
+    height:113px;
+    width: 100%;
+    background:rgba(0,0,0,0.5);
+    z-index: 999;
+    transition: all 0.5s;
+}
+
+#header .header_area { 
+    display:flex;
+    justify-content: space-between;
+}
+
+#header .header_area h1 {
+    padding-top: 20px;
+}
+
+#header .header_area h1 a {
+    display:block; 
+    width:270px; 
+    height:71px; 
+    text-indent:-9999px; 
+    overflow:hidden; 
+    background:url(../img/logo.png) no-repeat;
+    background-size: contain;
+}
+
+/* 햄버거 버튼 */
+.openMOgnb {
+    display: none;
+}
+
+#header .header_cont {
+    color: #eee;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+#header .header_cont .util {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    margin: 10px 0 30px;
+} 
+
+#header .header_cont .util > li { 
+    padding-left:20px
+}
+
+.header_cont .util > li::after {
+    content:"|"; 
+    padding-left:10px; 
+    font-size:10px; 
+    color:#eee; 
+    position:relative; 
+    top:-2px; 
+    left:5px 
+}
+
+.header_cont .util > li:last-child::after { 
+    display:none 
+}
+
+
+#header .header_cont nav .gnb {
+    display: flex;
+    font-size: 18px;
+}
+
+#header .header_cont nav .gnb > li {
+    padding-left: 80px;
+    position: relative;
+}
+
+#header .header_cont nav .gnb > li > a { 
+    display:block; 
+    padding-bottom:35px; 
+}
+
+.submenu_list {
+     justify-content: center;
+     position: absolute;
+     top:100%;
+     left:50%;
+     margin-left: -110px;
+     z-index: 1;
+     width: 300px;
+     height: 58px;
+     display: none;
+}
+
+.submenu_list > li > a {
+    padding: 20px 15px;
+    display: inline-block;
+}
+
+#header .header_cont nav .gnb > li.on .submenu_list {
+    display:flex
+}
+
+
+.decobox {
+    position:absolute; 
+    top:100%; left:0;
+    background-color: rgba(250,100,0,0.85);
+    width: 100%;
+    height: 58px;
+    display: none;
+}
+
+
+/* footer */
+footer {
+    border-top:1px solid #ddd;
+}
+
+footer .foot_area { 
+    padding-top: 25px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+footer .foot_area .foot_list {
+    display: flex;
+}
+
+footer .foot_area .foot_list li {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+footer .foot_area .foot_list li:first-child:after {
+    content:"|";  /* 글자는 모두 inline성격 */
+    padding:0 10px; 
+    font-size:10px; 
+    color:#000; 
+    /* display: inline-block;
+    transform: translateY(-3px); */
+    position: relative;
+    top:-3px
+}
+
+footer .foot_area h2 {
+    padding-top:25px; 
+    font-size:14px; 
+    color:#666;
+}
+
+footer .foot_area .addr {
+    padding-top:5px; 
+    line-height:1.4; 
+    font-size:13px; 
+    color:#666;
+}
+
+footer .foot_area .copy {
+    padding-top:3px; 
+    font-size:13px; 
+    color:#666; 
+    letter-spacing:0;
+}
+
+footer .foot_area .addr .space0 {
+    letter-spacing: 0;
+}
+
+footer .foot_area .snslink {
+    position:absolute; 
+    right:20px; 
+    top:50px;
+    display: flex;
+}
+
+footer .foot_area .snslink li a {
+    width: 50px;
+    height: 74px;
+    margin-left: 60px;
+    display: block;
+    background: url(../img/ico_blog_r.png) no-repeat;
+}
+
+footer .foot_area .snslink li:nth-child(2) a {
+    background: url(../img/ico_facebook_r.png) no-repeat;
+}
+
+footer .foot_area .snslink li:nth-child(3) a {
+    background: url(../img/ico_instargram_r.png) no-repeat;
+}
+
+/* quick_area */
+.quick_area {
+    position:fixed; 
+    top:50%;
+    transform: translateY(-50%);
+    right:0; 
+    width:94px;
+    z-index:100;
+}
+
+.quick_area .quick_list li {
+    text-align:center; 
+    background:#282828; 
+    font-size:15px;
+}
+
+.quick_area .quick_list li a {
+    display:block; 
+    padding:15px 0; 
+    border-top:1px solid #4d4d4d;
+    color: #fff;
+}
+
+.quick_area .quick_list li:first-child a {
+    border-top: none;
+}
+
+.quick_area .quick_list li p {
+    line-height:1.3; 
+    font-size:12px; 
+}
+
+.quick_area .quick_list li a h3 {
+    padding-bottom:10px; 
+    color:#ddd; 
+    letter-spacing:-2px;
+}
+
+.quick_area .quick_list li:last-child a h3 {
+    padding-bottom:0;
+}
+
+.quick_area .quick_list li a h3 em {
+    display:none;
+}
+
+.to_top {
+    text-align:center; 
+    background:#fff;
+}
+
+.to_top a {
+    display:block; 
+    height:45px; 
+    box-sizing:border-box; 
+    text-indent:-9999px; 
+    overflow:hidden; 
+    border-left:1px solid #a3a3a3; 
+    border-bottom:1px solid #a3a3a3; 
+    background:url(../img/ico_totop.png) no-repeat center; 
+    background-size:50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
