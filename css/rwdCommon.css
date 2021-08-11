@@ -225,11 +225,19 @@
         background: url(../img/ico_blog_r.png) no-repeat;
     }
 
-   
-    
+}
 
+@media screen and (max-width: 420px) {
+    #header .header_area h1 a {
+        height:28px; 
+    }
 
-
-    
-
+    .quick_area .quick_list li a {display:block; position:relative; 
+        border-top:1px solid #4d4d4d; color:#fff;
+        padding:40px 0px 15px 0px; 
+        text-align:center;
+        background-repeat:no-repeat;
+        background-position:center 15px;
+        background-size:20px auto;
+    }
 }

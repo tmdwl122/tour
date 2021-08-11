@@ -61,11 +61,12 @@ body {
 #header .header_area h1 a {
     display:block; 
     width:270px; 
-    height:71px; 
+    height:50px; 
     text-indent:-9999px; 
     overflow:hidden; 
     background:url(../img/logo.png) no-repeat;
     background-size: contain;
+    background-position: center top;
 }
 
 /* 햄버거 버튼 */
